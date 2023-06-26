@@ -1,0 +1,6 @@
+aliyunoss.properties
+jdbc.properties
+
+/target/
+
+/src/main/webapp/artworks

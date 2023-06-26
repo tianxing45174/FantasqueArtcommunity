@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fantasque.artcommunity.mapper.CommentMapper">
+
+    <resultMap id="BaseResultMap" type="com.fantasque.artcommunity.entity.Comment">
+            <id property="commentid" column="commentid" jdbcType="INTEGER"/>
+            <result property="userid" column="userid" jdbcType="INTEGER"/>
+            <result property="artworkid" column="artworkid" jdbcType="INTEGER"/>
+            <result property="comment" column="comment" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        commentid,userid,artworkid,
+        comment,status
+    </sql>
+</mapper>
