@@ -1,0 +1,158 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.test {
+    background: green;
+}
+.bgimg {
+    width: 100%;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 0;
+}
+.clear {
+    clear: both;
+}
+.header {
+    height: 50px;
+    position: sticky;
+    background: rgba(0,0,0,.30);
+}
+.top-distance {
+    margin-top: 8px;
+}
+button, input {
+    overflow: visible;
+}
+
+.index-form {
+    position: relative;
+    margin: 20vh auto 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.80);
+    width: 363px;
+    padding: 40px 10px 38px;
+    border-radius: 4px;
+}
+.alert {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    padding: 6px 20px;
+    display: none;
+    background: rgba(0, 0, 0, 0.34);
+    /* height: 40px; */
+    border-radius: 40px;
+    color: #fff;
+    transition: .5s linear 0s;
+    text-align: center;
+    line-height: 40px;
+}
+
+.btn {
+    box-sizing: border-box;
+    padding: 9px 24px;
+    display: block;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.login-btn {
+    background: rgba(0,0,0,.32);
+    color: #66CCFF;
+    transition: .5s linear 0s;
+}
+.signup-btn {
+    background: #66CCFF;
+    transition: .5s linear 0s;
+}
+.signup-btn-true {
+    background: blue;
+    transition: .5s linear 0s;
+}
+.right {
+    margin: 5px;
+    float: right;
+    /* display: inline-block; */
+    position: relative;
+    right: 5%;
+}
+
+.text {
+    color: rgb(71, 71, 71);
+    background-color: rgba(0, 0, 0, 0.04);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    border: 0px;
+    box-sizing: border-box;
+    padding: 0px 8px;
+    outline:none;
+}
+.text:focus {
+    border: #66CCFF 2px solid;
+}
+
+.login-button {
+    width: 100%;
+    border: none;
+}
+
+.content {
+    clear: both;
+    margin: 20vh auto 10vh;
+    width: 1200px;
+    height: 436px;
+}
+.artworks {
+    border-width: 0px;
+    margin: 5px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 20px;
+    background-position-x: 50%;
+    background-position-y: 0;
+}
+.artwork {
+    height: 180px;
+    width: 180px;
+}
+.navbottom,.navbottomall {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 120px;
+    transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+.navbottom {
+    color: gray;
+}
+.navbottomdisabled {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.52);
+}
+.navbottomall {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.52);
+}
+.navbottomall:hover {
+    cursor: default;
+}
+.navbottomone:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.52);
+    transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
+}
