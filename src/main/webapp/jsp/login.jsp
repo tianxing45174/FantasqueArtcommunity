@@ -33,6 +33,7 @@
             </div>
         </div>
         <form name="loginForm" class="index-form clear" action="/user/login" method="post">
+            <input type="hidden" name="_method" value="GET"/>
             <div class="alert ac-alert">
                 <p>${loginmsg}</p>
             </div>
