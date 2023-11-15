@@ -1,0 +1,78 @@
+server:
+  port: 88
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+  sleuth:
+    sampler:
+      probability: 1
+  redis:
+    host: ${ip_addr}
+  session:
+    store-type: redis
+    #暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: coupon_route
+#          uri: lb://fanmall-coupon
+#          predicates:
+#            - Path=/api/coupon/**
+#          filters:
+#            - RewritePath=/api/(?<segment>.*),/$\{segment}
+#
+#        - id: member_route
+#          uri: lb://fanmall-member
+#          predicates:
+#            - Path=/api/member/**
+#          filters:
+#            - RewritePath=/api/(?<segment>.*),/$\{segment}
+#
+#        - id: order_route
+#          uri: lb://fanmall-order
+#          predicates:
+#            - Path=/api/order/**
+#          filters:
+#            - RewritePath=/api/(?<segment>.*),/$\{segment}
+#
+#        - id: product_route
+#          uri: lb://fanmall-product
+#          predicates:
+#            - Path=/api/product/**
+#          filters:
+#            - RewritePath=/api/(?<segment>.*),/$\{segment}
+#
+#        - id: ware_route
+#          uri: lb://fanmall-ware
+#          predicates:
+#            - Path=/api/ware/**
+#          filters:
+#            - RewritePath=/api/(?<segment>.*),/$\{segment}
+#
+#        - id: thirdparty_route
+#          uri: lb://fanmall-third-party
+#          predicates:
+#            - Path=/api/thirdparty/**
+#          filters:
+#            - RewritePath=/api/(?<segment>.*),/$\{segment}
+#
+#        - id: admin_route
+#          uri: lb://renren-fast
+#          predicates:
+#            - Path=/api/**
+#          filters:
+#            - RewritePath=/api/?(?<segment>.*),/renren-fast/$\{segment}
+#
+#        - id: fanmall_host_route
+#          uri: lb://fanmall-product
+#          predicates:
+#            - Host=**.fanmall.com,fanmall.com
+#          filters:
+#            - RewritePath=/api/?(?<segment>.*),/renren-fast/$\{segment}

@@ -1,0 +1,35 @@
+server:
+  port: 13000
+spring:
+  thymeleaf:
+    cache: false
+  session:
+    store-type: redis
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+  sleuth:
+    sampler:
+      probability: 1
+  #暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+fanmall:
+  thread:
+    coreSize: 20
+    maxSize: 200
+    keepAliveTime: 10
+
+feign:
+  sentinel:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000

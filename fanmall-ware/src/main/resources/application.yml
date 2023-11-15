@@ -1,0 +1,50 @@
+server:
+  port: 11001
+
+# MapperScan
+# sql映射文件位置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+logging:
+  level:
+    com.fantasque.fanmall: debug
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH-mm-ss
+  rabbitmq:
+    host: ${ip_addr}
+    port: 5672
+    virtual-host: /
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      direct:
+        acknowledge-mode: manual
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+  sleuth:
+    sampler:
+      probability: 1
+  #暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign:
+  sentinel:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000

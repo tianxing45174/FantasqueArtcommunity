@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: renren-fast
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: b2e6aad8-e2e4-4cae-8ed7-c70bc259ca4c
+        ext-config[0]:
+          data-id: default.yaml
+          group: DEFAULT_GROUP
+          refresh: true

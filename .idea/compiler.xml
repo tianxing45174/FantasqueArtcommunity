@@ -7,9 +7,44 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="artcommunity" />
+        <module name="fanmall-seckill" />
+        <module name="fanmall-product" />
+        <module name="fanmall-member" />
+        <module name="fanmall-auth-server" />
+        <module name="fanmall-coupon" />
+        <module name="fanmall-gateway" />
+        <module name="fanmall-third-party" />
+        <module name="fanmall-cart" />
+        <module name="fanmall-ware" />
+        <module name="fanmall-common" />
+        <module name="fanmall-search" />
+        <module name="renren-fast" />
+        <module name="feign" />
+        <module name="fanmall-order" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="gulimall-gateway" target="1.8" />
+      <module name="renren-generator" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="fanmall-auth-server" options="-parameters" />
+      <module name="fanmall-cart" options="-parameters" />
+      <module name="fanmall-coupon" options="-parameters" />
+      <module name="fanmall-gateway" options="-parameters" />
+      <module name="fanmall-member" options="-parameters" />
+      <module name="fanmall-order" options="-parameters" />
+      <module name="fanmall-product" options="-parameters" />
+      <module name="fanmall-search" options="-parameters" />
+      <module name="fanmall-seckill" options="-parameters" />
+      <module name="fanmall-third-party" options="-parameters" />
+      <module name="fanmall-ware" options="-parameters" />
+      <module name="feign" options="-parameters" />
+      <module name="gulimall-gateway" options="-parameters" />
+      <module name="renren-fast" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+    </option>
   </component>
 </project>

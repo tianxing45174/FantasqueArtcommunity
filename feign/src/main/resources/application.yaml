@@ -1,0 +1,10 @@
+server:
+  port: 22022
+feign:
+  sentinel:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000

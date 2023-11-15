@@ -1,0 +1,21 @@
+spring:
+  #暴露所有端点
+  zipkin:
+    base-url: http://${ip_addr}:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  application:
+    name: fanmall-cart
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: d276f804-008b-4719-982b-fddd5b403f6d
+        ext-config[0]:
+          data-id: redis.yaml
+          group: DEFAULT_GROUP
+          refresh: true

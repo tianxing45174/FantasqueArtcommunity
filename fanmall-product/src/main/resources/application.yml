@@ -1,0 +1,53 @@
+server:
+  port: 10002
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+    cache: false
+  session:
+    store-type: redis
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+  sleuth:
+    sampler:
+      probability: 1
+  #暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+fanmall:
+  thread:
+    coreSize: 20
+    maxSize: 200
+    keepAliveTime: 10
+#    cache-names:
+
+# MapperScan
+# sql映射文件位置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      #配置逻辑删除
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+logging:
+  level:
+    com.fantasque.fanmall: debug
+    com.alibaba.nacos.client.naming: WARN
+    com.alibaba.nacos.client.config.impl: WARN
+feign:
+  sentinel:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000

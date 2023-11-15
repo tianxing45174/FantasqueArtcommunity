@@ -1,0 +1,21 @@
+spring:
+  #暴露所有端点
+  zipkin:
+    base-url: http://${ip_addr}:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  application:
+    name: fanmall-coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: f64fcd80-d7d4-4fa0-a740-67af805330a3
+        ext-config[0]:
+          data-id: default.yaml
+          group: DEFAULT_GROUP
+          refresh: true

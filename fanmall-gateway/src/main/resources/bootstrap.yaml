@@ -1,0 +1,21 @@
+spring:
+  #暴露所有端点
+  zipkin:
+    base-url: http://${ip_addr}:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  application:
+    name: fanmall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: 7bd393f6-0b00-435e-9af5-5e69c2abe3ac
+        ext-config[0]:
+          data-id: Gateway.yaml
+          group: DEFAULT_GROUP
+          refresh: true

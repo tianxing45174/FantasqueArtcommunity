@@ -1,0 +1,29 @@
+spring:
+  #暴露所有端点
+  zipkin:
+    base-url: http://${ip_addr}:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  application:
+    name: fanmall-third-party
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: 69bf9747-e923-46ef-a8b5-f77bb48bd521
+        ext-config[0]:
+          data-id: oss.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        ext-config[1]:
+          data-id: mailconfig.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        ext-config[2]:
+          data-id: SmsMsgConfig.yaml
+          group: DEFAULT_GROUP
+          refresh: true

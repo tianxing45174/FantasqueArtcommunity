@@ -1,0 +1,21 @@
+spring:
+  #暴露所有端点
+  zipkin:
+    base-url: http://${ip_addr}:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  application:
+    name: fanmall-auth-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: 670b118f-3153-41dc-9e8f-2879eb1fa550
+        ext-config[0]:
+          data-id: redis.yaml
+          group: DEFAULT_GROUP
+          refresh: true

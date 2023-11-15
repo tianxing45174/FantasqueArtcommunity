@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-cart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-coupon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-member/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-product/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-seckill/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-third-party/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fanmall-ware/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/renren-fast/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/renren-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../../java/apache-maven-3.8.6/maven-repository/org/springframework/boot/spring-boot-starter-parent/2.1.8.RELEASE/src/main/resources" charset="UTF-8" />
   </component>
 </project>

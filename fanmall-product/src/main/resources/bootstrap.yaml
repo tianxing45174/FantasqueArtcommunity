@@ -1,0 +1,33 @@
+spring:
+  #暴露所有端点
+  zipkin:
+    base-url: http://${ip_addr}:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  application:
+    name: fanmall-product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: 2836ace5-c848-45fa-8f26-b7647cfa57f7
+        ext-config[0]:
+          data-id: mysql.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        ext-config[1]:
+          data-id: feign.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        ext-config[2]:
+          data-id: redis.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        ext-config[3]:
+          data-id: Cache.yaml
+          group: DEFAULT_GROUP
+          refresh: true

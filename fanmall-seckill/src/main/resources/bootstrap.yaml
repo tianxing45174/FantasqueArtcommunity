@@ -1,0 +1,25 @@
+spring:
+  #暴露所有端点
+  zipkin:
+    base-url: http://${ip_addr}:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  application:
+    name: fanmall-seckill
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${ip_addr}:8848
+      config:
+        server-addr: ${ip_addr}:8848
+        file-extension: yaml
+        namespace: fa5aad2f-eb82-441b-a861-88b2f0fc8866
+        ext-config[0]:
+          data-id: default.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        ext-config[1]:
+          data-id: redis.yaml
+          group: DEFAULT_GROUP
+          refresh: true
